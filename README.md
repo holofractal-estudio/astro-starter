@@ -6,6 +6,8 @@
 https://icon-sets.iconify.design/material-symbols/
 https://icon-sets.iconify.design/material-symbols-light/
 
+## SEO
+https://medium.com/@aisyndromeart/optimizing-astro-js-websites-for-seo-a-guide-for-developers-25fcd20c8e30
 
 
 
