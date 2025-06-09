@@ -1,10 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+
+import { Image } from 'astro:assets';
+import logo from '../assets/holofractal.png';
 ---
 
 <BaseLayout title="Astro Starter | Inicio">
+
   <h2>Este es un starter universal para sitios web simples.</h2>
+
   <p class="text-blue-600 text-2xl">¡Tailwind funciona!</p>
+
+  <Image src={logo} alt="Logo de Holofractal" />
+
 </BaseLayout>
