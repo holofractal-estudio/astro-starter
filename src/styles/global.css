@@ -1,7 +1,4 @@
-/* tailwind global */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
 	font-family: system-ui, sans-serif;
