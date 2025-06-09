@@ -1,14 +1,22 @@
 ---
 import "../styles/global.css";
+const { frontmatter } = Astro.props;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Astro Starter - Inicio</title>
+    <title>{frontmatter.title || 'Astro Starter'}</title>
   </head>
-  <body>
-    <slot />
+  <body class="bg-white text-gray-900 font-sans">
+    <header class="p-4 bg-blue-600 text-white">
+      <h1 class="text-3xl">{frontmatter.title}</h1>
+    </header>
+    <main class="prose p-6">
+      <slot />
+    </main>
+    <footer class="p-4 bg-blue-600 text-white">
+      <p>&copy; 2025 Mi Sitio</p>
+    </footer>
   </body>
 </html>
