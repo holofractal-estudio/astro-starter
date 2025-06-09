@@ -1,3 +1,16 @@
+
+# Dev Notes .....................................
+
+
+## Icon set
+https://icon-sets.iconify.design/material-symbols/
+https://icon-sets.iconify.design/material-symbols-light/
+
+
+
+
+# ................................................
+
 # Astro Starter Kit: Minimal
 
 ```sh

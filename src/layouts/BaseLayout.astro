@@ -14,9 +14,9 @@ const title = (props.frontmatter?.title ?? props.title) || 'Astro Starter';
     <title>{title}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
-  <body class="bg-white text-gray-900 font-sans">
+  <body class="font-sans">
     <Header title={title} />
-    <main class="prose p-6">
+    <main class="p-12">
       <slot />
     </main>
     <Footer />

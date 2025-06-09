@@ -1,9 +1,2 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-
-body {
-	font-family: system-ui, sans-serif;
-	margin: 0;
-	padding: 0;
-	background: #d5d5d5;
-}
