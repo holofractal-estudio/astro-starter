@@ -1,6 +1,28 @@
 ---
-layout: ../layouts/ProseLayout.astro
-title: "Astro Starter | MDX"
+layout: ../layouts/MdxLayout.astro
+
+seo:
+  title: "Markdown Page"
+  description: "Ejemplo de página de Astro usando Markdown"
+
+  ogTitle: "Markdown Page (OG)"
+  ogDescription: "Ejemplo de página de Astro usando Markdown (OG)"
+  ogType: "article"
+  ogImage: "/og/markdown.jpg"
+
+  publishedTime: "2023-09-01T12:00:00Z"
+  modifiedTime: "2024-10-01T12:00:00Z"
+  expirationTime: "2025-11-01T12:00:00Z"
+  authors:
+    - "John Doe"
+    - "Jane Smith"
+  section: "Ejemplos"
+  tags:
+    - "astro"
+    - "markdown"
+    - "ejemplo"
+    - "tutorial"
+
 ---
 
 # ¡Hola, mundo!
@@ -9,3 +31,4 @@ Este es un ejemplo de página utilizando MDX con un layout personalizado y clase
 
 - **Punto 1:** Estilizado con Tailwind.
 - **Punto 2:** Usando un layout reutilizable.
+

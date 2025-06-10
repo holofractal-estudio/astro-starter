@@ -1,62 +1,39 @@
+# Astro Starter Dev Notes 
 
-# Dev Notes .....................................
 
+## Icon sets
 
-## Icon set
 https://icon-sets.iconify.design/material-symbols/
 https://icon-sets.iconify.design/material-symbols-light/
 
+
 ## SEO
+
 https://medium.com/@aisyndromeart/optimizing-astro-js-websites-for-seo-a-guide-for-developers-25fcd20c8e30
 
+https://www.freecodecamp.org/news/what-is-open-graph-and-how-can-i-use-it-for-my-website/
+
+https://ogp.me/
+
+- Colocar imagenes para opengraph en /og/index.png (general, o una por página)
 
 
-# ................................................
+### Estructura para personalizar SEO simplificado en páginas (y sus valores default):
 
-# Astro Starter Kit: Minimal
+seo:
 
-```sh
-npm create astro@latest -- --template minimal
-```
+- title = SITE.name
+- description = SITE.description
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+- ogTitle = title
+- ogDescription = description
+- ogType = "website" | "article" si detecta metadata
+- ogImage = SITE.name + "/og/index.jpg"
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- publishedTime (fecha ISO)
+- modifiedTime (fecha ISO)
+- expirationTime (fecha ISO)
+- authors (array de strings)
+- section (string)
+- tags (array de strings)
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

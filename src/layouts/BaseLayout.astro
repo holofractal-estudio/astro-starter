@@ -3,19 +3,19 @@ import "../styles/global.css";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Seo from '../components/Seo.astro';
 
-const props = Astro.props;
-const title = (props.frontmatter?.title ?? props.title) || 'Astro Starter';
+const {seo = {}} = Astro.props;
 ---
-
 <html lang="es">
+
   <head>
-    <meta charset="UTF-8" />
-    <title>{title}</title>
+    <Seo {seo} />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
+
   <body class="font-sans">
-    <Header title={title} />
+    <Header title={seo.title} />
     <main class="p-12">
       <slot />
     </main>
