@@ -2,6 +2,5 @@
 import { SEO } from 'astro-seo';
 import { getSeoData } from '../utils/seo.js'
 const seo = getSeoData(Astro.props.seo);
-console.log('SEO Data:', seo);
 ---
 <SEO {...seo} />
