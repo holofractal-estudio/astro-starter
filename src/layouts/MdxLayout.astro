@@ -1,33 +1,7 @@
 ---
-/*
-Usar este layout para pagina con contenido markdown / (.mdx)
-- obtiene propiedades frontmatter en props para SEO en BaseLayout o layouts personalizados
-
-- modos de uso: 
-  - puede usar el slot para texto formateado desde markdown
-  - puede usar las propiedades de frontmatter para crear layouts personalizados
-
-- modos de estilizar:
-  - usando clases prose como en el ejemplo
-  - usando el scope de article en global.css para estilos estandarizados
-
-*/
-
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
-const props = {...frontmatter}
 ---
-
-<BaseLayout seo={props.seo ?? {}}>
-	<article
-		class="prose 
-		prose-h1:font-bold 
-		prose-h1:text-2xl
-		prose-p:text-blue-800 
-		prose-p:text-justify 
-		prose-img:rounded-xl
-		prose-headings:underline">
-		<slot /> <!--* Texto formateado desde markdown -->
-		<!-- <h1>{props.nombre}</h1> * Layouts definidos con datos de frontmatter -->
-	</article>
+<BaseLayout seo={frontmatter.seo ?? {}}>
+	<slot />
 </BaseLayout>
