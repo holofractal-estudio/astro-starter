@@ -18,9 +18,5 @@ export const SEO_DEFAULTS = {
       siteName: SITE.name,
       locale: "es_MX",
     }
-  },
-  // CAUSA ERROR DE COINCIDENCIA DE TIPOS
-  // twitter: {
-  //   card: "summary_large_image",
-  // }
+  }
 };

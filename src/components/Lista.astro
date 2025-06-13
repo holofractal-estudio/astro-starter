@@ -5,7 +5,7 @@ console.log('Lista items:', items);
 ---
 
 <ul class="text-gray-500 space-y-3 mb-5">
-	{ items.map( (item) => (
+	{ items.map( (item: string) => (
 		<Item>{item}</Item> 
 	))}
 	<slot />
