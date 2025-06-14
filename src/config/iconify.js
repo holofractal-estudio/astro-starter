@@ -2,7 +2,15 @@
 export default {
 
 	'material-symbols': [
-		'bolt-outline'
+		'*'
+	],
+
+	'material-symbols-light': [
+		'*'
+	],
+
+	'lucide': [
+		'*'
 	]
 
 
