@@ -11,8 +11,6 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/sitemap": "^3.4.1",
-    "@iconify-json/material-symbols": "^1.2.25",
-    "@iconify-json/material-symbols-light": "^1.2.25",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.9.1",
     "astro-icon": "^1.1.5",

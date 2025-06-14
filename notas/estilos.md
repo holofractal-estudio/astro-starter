@@ -3,7 +3,11 @@
 
 ## Tailwind
 
+### Recursos
+
 Bloques UI
+https://preline.co/docs	***
+
 https://flowbite.com/
 https://tailblocks.cc/
 https://headlessui.com/
@@ -19,13 +23,18 @@ Libreria de componentes de la comunidad hechos con Tailwind
 https://www.creative-tim.com/
 
 
+#### Preline UI
 
-## Flowbite
+Integración Astro
+https://preline.co/docs/frameworks-astro.html
+
+
+
+
+#### Flowbite
 
 Astro integration 
 https://flowbite.com/docs/getting-started/astro/
-
-
 
 Example project
 https://github.com/leabs/astro-tailwind-flowbite-template
@@ -35,7 +44,8 @@ Official Flowbite Starter
 https://github.com/themesberg/tailwind-astro-starter
 
 
-## tailwind-merge
+
+### tailwind-merge
 
 Utilidad para concatenar strings de clases resolviendo conflictos, para componentes donde las clases se asignan dinamicamente con props
 
