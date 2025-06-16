@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import { SITE } from '../config/site.js';
+
+// SEO
+import { SEO } from 'astro-seo';
+import { getSeoData } from '../utils/seo.js'
+const { seo = {} } = Astro.props.frontmatter || Astro.props;
+const seoData = getSeoData(seo);
+
+---
+<html lang={ SITE.lang }>
+  <head>
+    <SEO { ...seoData } />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

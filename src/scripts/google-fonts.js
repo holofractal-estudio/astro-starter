@@ -3,14 +3,15 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import https from 'https';
-import fontConfig from '../config/fonts.js';
+import fontConfig from '../config/google-fonts.js';
 
 const {
-  cssOutPath = 'src/styles/fonts.css',
+  cssDir = 'src/styles',
   fontsDir = 'public/fonts',
   fonts = [],
 } = fontConfig;
 
+const cssMasterPath = path.join(cssDir, 'fonts.css');
 const baseUrl = 'https://fonts.googleapis.com/css2';
 
 function normalizeFamilyName(family) {
@@ -110,9 +111,8 @@ async function run() {
         localCss = localCss.replace(/\.[\w-]+(?=\s*\{)/g, `.${config.class}`);
       }
 
-      const cssOutputDir = path.dirname(cssOutPath);
-      const cssFilePath = path.join(cssOutputDir, cssFile);
-      await fs.mkdir(cssOutputDir, { recursive: true });
+      await fs.mkdir(cssDir, { recursive: true });
+      const cssFilePath = path.join(cssDir, cssFile);
       await fs.writeFile(cssFilePath, `/* Fuente generada desde: ${url} */\n\n${localCss}`);
       console.log(`✔ CSS de ${config.family} guardado en ${cssFile}`);
 
@@ -123,8 +123,8 @@ async function run() {
   }
 
   if (cssImports.length > 0) {
-    await fs.writeFile(cssOutPath, cssImports.join('\n') + '\n');
-    console.log(`\n📄 Archivo maestro de fuentes generado en ${cssOutPath}\n`);
+    await fs.writeFile(cssMasterPath, cssImports.join('\n') + '\n');
+    console.log(`\n📄 Archivo maestro de fuentes generado en ${cssMasterPath}\n`);
   }
 
   console.log(`\n🎉 Descarga de fuentes completada\n`);
