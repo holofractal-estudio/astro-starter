@@ -1,11 +1,11 @@
-
-/* Fuente generada desde: https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0,-50&icon_names=home,menu,search,settings */
+/* Fuente generada desde: https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=check,close,home&display=swap */
 
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
-  font-weight: 100 700;
-  src: url(/fonts/google-icons.woff2) format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/material-symbols-outlined.woff2) format('woff2');
 }
 
 .google-icons {

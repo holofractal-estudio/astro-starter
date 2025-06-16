@@ -28,6 +28,7 @@
 - alternativa a iconify para tener más control de apariencia de iconos con fuente variable y weights
 *  [ se implementará componente Icon.astro con prop que especifica que se usa este tipo de iconos ]
 
+
 #### Por implementar
 
 > src/config/fonts.js 
