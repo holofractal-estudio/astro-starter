@@ -10,7 +10,7 @@
 ### Personalizar archivos de configuración para cada sitio
 
 > src/config/site.js 
-- generalidades del sitio web como url, nombre, descripción, etc
+- generalidades del sitio web como url, nombre, descripción, idioma, etc
 
 > src/config/seo.js 
 - valores default para etiquetas meta de cada página 
@@ -22,17 +22,13 @@
 - se van especificando sobre la marcha para quitar el '*' para un build de producción
 * [ se implementará componente Icon.astro para usarlo en páginas y por default usa estos iconos ]
 
-> src/config/google-icons.js
-- valores para descargar fuentes subseteadas con iconos de material-symbols
-- ejecutar 'npm run google-icons-gen' en terminal para descargar la fuente
-- alternativa a iconify para tener más control de apariencia de iconos con fuente variable y weights
-*  [ se implementará componente Icon.astro con prop que especifica que se usa este tipo de iconos ]
+> src/config/fonts.js 
+- valores para descargar e incluir fuentes de Google Fonts con script 'npm run fonts' en terminal
+- aquí mismo se definen los datos para descargar la fuente de iconos de Google
+	- alternativa a iconify para tener más control de apariencia de iconos con fuente variable y weights
 
 
 #### Por implementar
-
-> src/config/fonts.js 
-- valores para descargar e incluir fuentes de Google Fonts con script 'npm run get-fonts' en terminal
 
 > src/config/components.js 
 - diccionario de valores a establecer como default para cada componente a nivel de proyecto
