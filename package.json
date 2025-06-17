@@ -7,11 +7,13 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fonts": "node src/scripts/google-fonts.js"
+    "fonts": "node src/scripts/fonts.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/sitemap": "^3.4.1",
+    "@fontsource-variable/roboto": "^5.2.6",
+    "@fontsource-variable/roboto-flex": "^5.2.6",
     "@iconify-json/lucide": "^1.2.48",
     "@iconify-json/material-symbols": "^1.2.26",
     "@iconify-json/material-symbols-light": "^1.2.26",

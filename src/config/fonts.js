@@ -5,7 +5,8 @@ export default {
 		{
 			family: 'Inter',
 			axes: { 
-				wght: '300..700' 
+				opsz: '14..32',
+				wght: '100..900'
 			},
 		},
 		{

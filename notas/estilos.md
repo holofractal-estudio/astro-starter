@@ -22,6 +22,10 @@ https://www.reddit.com/r/flowbite/comments/1dj4if3/question_are_there_any_prebui
 Libreria de componentes de la comunidad hechos con Tailwind
 https://www.creative-tim.com/
 
+Paletas de colores mas detalladas basadas en las originales
+https://fullwindcss.com/
+
+
 
 #### Preline UI
 

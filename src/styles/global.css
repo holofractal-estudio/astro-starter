@@ -1,6 +1,13 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+/* @plugin "@tailwindcss/typography"; */
+
+@theme {
+
+    --font-body: 'Roboto Flex Variable', sans-serif;
+    --font-head: 'Roboto Flex Variable', sans-serif;
+
+}
 
 @layer base {
-  @import './fonts.css';
+    @import './tipografia.css';
 }

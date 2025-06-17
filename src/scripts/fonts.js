@@ -3,7 +3,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import https from 'https';
-import fontConfig from '../config/google-fonts.js';
+import fontConfig from '../config/fonts.js';
 
 const {
   cssDir = 'src/styles',
