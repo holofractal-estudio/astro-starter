@@ -18,4 +18,20 @@ const seoData = getSeoData(seo);
   <body>
     <slot />
   </body>
+
+  <!-- Optional Preline plugins 
+  <script is:inline src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script is:inline src="./assets/vendor/lodash/lodash.js"></script>
+  <script is:inline src="./assets/vendor/datatables.net/js/dataTables.min.js"></script>
+  <script is:inline src="./assets/vendor/dropzone/dist/dropzone-min.js"></script>
+  <script is:inline src="./assets/vendor/nouislider/dist/nouislider.min.js"
+  ></script>
+  <script is:inline src="./assets/vendor/vanilla-calendar-pro/index.js"></script> 
+  -->
+  <!-- Preline UI -->
+  <script>import "preline/dist/preline.js";</script>
+  <!-- <script is:inline src="./assets/vendor/preline/dist/index.js">
+    // Astro workaround for Preline above
+  </script> -->
+
 </html>
