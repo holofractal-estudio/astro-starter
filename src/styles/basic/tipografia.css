@@ -15,19 +15,19 @@
 	--text-9xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 10));
 
 
-  --text-xs--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -2 * var(--type-leading-falloff)));
-  --text-sm--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -1 * var(--type-leading-falloff)));
-  --text-base--line-height: var(--type-leading-max);
-  --text-lg--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 1 * var(--type-leading-falloff)));
-  --text-xl--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 2 * var(--type-leading-falloff)));
-  --text-2xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 3 * var(--type-leading-falloff)));
-  --text-3xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 4 * var(--type-leading-falloff)));
-  --text-4xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 5 * var(--type-leading-falloff)));
-  --text-5xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 6 * var(--type-leading-falloff)));
-  --text-6xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 7 * var(--type-leading-falloff)));
-  --text-7xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 8 * var(--type-leading-falloff)));
-  --text-8xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 9 * var(--type-leading-falloff)));
-  --text-9xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 10 * var(--type-leading-falloff)));
+	--text-xs--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -2 * var(--type-leading-falloff)));
+	--text-sm--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -1 * var(--type-leading-falloff)));
+	--text-base--line-height: var(--type-leading-max);
+	--text-lg--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 1 * var(--type-leading-falloff)));
+	--text-xl--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 2 * var(--type-leading-falloff)));
+	--text-2xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 3 * var(--type-leading-falloff)));
+	--text-3xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 4 * var(--type-leading-falloff)));
+	--text-4xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 5 * var(--type-leading-falloff)));
+	--text-5xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 6 * var(--type-leading-falloff)));
+	--text-6xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 7 * var(--type-leading-falloff)));
+	--text-7xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 8 * var(--type-leading-falloff)));
+	--text-8xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 9 * var(--type-leading-falloff)));
+	--text-9xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 10 * var(--type-leading-falloff)));
 }
 
 @layer base {

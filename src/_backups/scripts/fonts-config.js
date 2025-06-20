@@ -6,7 +6,14 @@ export default {
 			family: 'Inter',
 			axes: { 
 				opsz: '14..32',
-				wght: '100..900'
+				wght: '100..900',
+				aaaaa: {
+					bbbb: {
+						ccccc: {
+							
+						}
+					}
+				}
 			},
 		},
 		{

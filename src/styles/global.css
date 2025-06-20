@@ -2,11 +2,12 @@
 @import "./basic/preline.css";
 
 /* FONTS */
-@import "./fonts/variable/roboto-flex-standard.css";
+@import "./fonts/roboto-flex-standard.css";
 @theme {
     --font-body: 'Roboto Flex Variable', sans-serif;
     --font-head: 'Roboto Flex Variable', sans-serif;
 }
+
 
 /* PERSONALIZACION */
 :root {
@@ -21,6 +22,14 @@
 
 
 @import "./basic/tipografia.css";
+
+
+@layer utilities {
+    .smaller {
+        --type-scale-base: 0.1rem
+    }
+}
+
 
 
 /* TESTING */
