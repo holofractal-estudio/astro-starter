@@ -1,3 +1,12 @@
+Tailwind
+
+- Curso completo de Tailwind -- https://www.youtube.com/watch?v=6biMWgD6_JY&ab_channel=JavaScriptMastery
+
+
+Shadcn
+- biblioteca de componentes  -- https://ui.shadcn.com/
+
+
 
 
 Preline

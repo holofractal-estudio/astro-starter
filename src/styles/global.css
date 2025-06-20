@@ -1,35 +1,28 @@
 @import "tailwindcss";
+@import "./basic/preline.css";
 
-/* Preline UI */
-@import "preline/variants.css";
-@source "../../node_modules/preline/dist/*.js";
-
-/* Optional Preline UI Datepicker Plugin */
-/* @import "preline/src/plugins/datepicker/styles.css"; */
-
-/* Plugins */
-/* @plugin "@tailwindcss/forms"; */
-/* @plugin "@tailwindcss/typography"; */
-
-
+/* FONTS */
+@import "./fonts/variable/roboto-flex-standard.css";
 @theme {
-
     --font-body: 'Roboto Flex Variable', sans-serif;
     --font-head: 'Roboto Flex Variable', sans-serif;
-
 }
 
-@layer base {
+/* PERSONALIZACION */
+:root {
 
-    @import './tipografia.css';
-
-    /* Preline suggestion: Adds pointer cursor to buttons */
-    button:not(:disabled),
-    [role="button"]:not(:disabled) {
-        cursor: pointer;
-    }
-
+    /* TAMAÑO DE TEXTO */
+    --type-scale-base: 1rem;
+    --type-scale-factor: 1.1;
+    --type-leading-max: 1.5;
+    --type-leading-falloff: 0.24;
 }
 
-/* Preline suggestion: Defaults hover styles on all devices */
-@custom-variant hover (&:hover);
+
+@import "./basic/tipografia.css";
+
+
+/* TESTING */
+body { 
+    @apply p-10 bg-gray-900 text-gray-500; 
+}

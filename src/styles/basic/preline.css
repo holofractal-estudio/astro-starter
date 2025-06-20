@@ -1,0 +1,28 @@
+
+
+@import "preline/variants.css";
+
+@source "../../node_modules/preline/dist/*.js";
+
+/* Optional Preline UI Datepicker Plugin */
+/* @import "preline/src/plugins/datepicker/styles.css"; */
+
+/* Plugins */
+/* @plugin "@tailwindcss/forms"; */
+/* @plugin "@tailwindcss/typography"; */
+
+/* Preline suggestion: Defaults hover styles on all devices */
+@custom-variant hover (&:hover);
+
+/* Dark mode con clase */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+
+    /* Preline suggestion: Adds pointer cursor to buttons */
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+
+}
