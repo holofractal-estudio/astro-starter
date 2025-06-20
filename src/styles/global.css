@@ -13,9 +13,10 @@
 
     /* TAMAÑO DE TEXTO */
     --type-scale-base: 1rem;
-    --type-scale-factor: 1.1;
+    --type-scale-factor: 1.2;
     --type-leading-max: 1.5;
     --type-leading-falloff: 0.24;
+
 }
 
 
