@@ -1,45 +1,15 @@
 
-@theme {
-	--text-xs: calc(var(--type-scale-base) / pow(var(--type-scale-factor), 2));
-	--text-sm: calc(var(--type-scale-base) / var(--type-scale-factor));
-	--text-base: var(--type-scale-base);
-	--text-lg: calc(var(--type-scale-base) * var(--type-scale-factor));
-	--text-xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 2));
-	--text-2xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 3));
-	--text-3xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 4));
-	--text-4xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 5));
-	--text-5xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 6));
-	--text-6xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 7));
-	--text-7xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 8));
-	--text-8xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 9));
-	--text-9xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 10));
-
-
-	--text-xs--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -2 * var(--type-leading-falloff)));
-	--text-sm--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -1 * var(--type-leading-falloff)));
-	--text-base--line-height: var(--type-leading-max);
-	--text-lg--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 1 * var(--type-leading-falloff)));
-	--text-xl--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 2 * var(--type-leading-falloff)));
-	--text-2xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 3 * var(--type-leading-falloff)));
-	--text-3xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 4 * var(--type-leading-falloff)));
-	--text-4xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 5 * var(--type-leading-falloff)));
-	--text-5xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 6 * var(--type-leading-falloff)));
-	--text-6xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 7 * var(--type-leading-falloff)));
-	--text-7xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 8 * var(--type-leading-falloff)));
-	--text-8xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 9 * var(--type-leading-falloff)));
-	--text-9xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 10 * var(--type-leading-falloff)));
-}
 
 @layer base {
 
 	/* FONT */
 	body { @apply font-body antialiased; }
-	h1, h2, h3, h4, h5, h6 { @apply font-head; }
+	h1, h2, h3, h4, h5, h6 { @apply font-head }
 	em, i { font-style: oblique 10deg; }
 
 	/* SIZES */
 	small { @apply text-sm; }
-	body { @apply text-base; }
+	body, p { @apply text-base; }
 	h1 	{ @apply text-5xl; }
 	h2 	{ @apply text-4xl; }
 	h3 	{ @apply text-3xl; }
@@ -47,56 +17,153 @@
 	h5 	{ @apply text-xl; }
 	h6 	{ @apply text-lg; }
 
-}
+	/* WEIGHTS */
+	body 	{ font-weight: var(--tag-weight-body); }
+	h1		{ font-weight: var(--tag-weight-h1); }
+	h2		{ font-weight: var(--tag-weight-h2); }
+	h3		{ font-weight: var(--tag-weight-h3); }
+	h4		{ font-weight: var(--tag-weight-h4); }
+	h5		{ font-weight: var(--tag-weight-h5); }
+	h6		{ font-weight: var(--tag-weight-h6); }
+	b, strong { font-weight: var(--tag-weight-strong); }
+
+	/* MARGINS */
+	h1, h2, h3, h4, h5, h6, p, small { margin-bottom: var(--type-ending); }
+	/* small {display: block; } */
 
 
-/* 
-ul, ol {
-	font-family: var(--font-base);
-	@apply list-inside list-disc space-y-2 mb-4;
+
 }
 
-li {
-	@apply text-base leading-relaxed;
+@theme {
+
+	--text-base: var(--type-scale-base);
+	--text-xs:  calc(var(--text-base) / pow(var(--type-scale-factor), 2));
+	--text-sm:  calc(var(--text-base) / pow(var(--type-scale-factor), 1));
+	--text-lg:  calc(var(--text-base) * pow(var(--type-scale-factor), 1));
+	--text-xl:  calc(var(--text-base) * pow(var(--type-scale-factor), 2));
+	--text-2xl: calc(var(--text-base) * pow(var(--type-scale-factor), 3));
+	--text-3xl: calc(var(--text-base) * pow(var(--type-scale-factor), 4));
+	--text-4xl: calc(var(--text-base) * pow(var(--type-scale-factor), 5));
+	--text-5xl: calc(var(--text-base) * pow(var(--type-scale-factor), 6));
+	--text-6xl: calc(var(--text-base) * pow(var(--type-scale-factor), 7));
+	--text-7xl: calc(var(--text-base) * pow(var(--type-scale-factor), 8));
+	--text-8xl: calc(var(--text-base) * pow(var(--type-scale-factor), 9));
+	--text-9xl: calc(var(--text-base) * pow(var(--type-scale-factor), 10));
+
+	--text-xs--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), -2 * var(--type-leading-falloff)));
+	--text-sm--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), -1 * var(--type-leading-falloff)));
+	--text-base--line-height: var(--type-leading);
+	--text-lg--line-height:   calc(var(--type-leading) / pow(var(--type-scale-factor), 1 * var(--type-leading-falloff)));
+	--text-xl--line-height:   calc(var(--type-leading) / pow(var(--type-scale-factor), 2 * var(--type-leading-falloff)));
+	--text-2xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 3 * var(--type-leading-falloff)));
+	--text-3xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 4 * var(--type-leading-falloff)));
+	--text-4xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 5 * var(--type-leading-falloff)));
+	--text-5xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 6 * var(--type-leading-falloff)));
+	--text-6xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 7 * var(--type-leading-falloff)));
+	--text-7xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 8 * var(--type-leading-falloff)));
+	--text-8xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 9 * var(--type-leading-falloff)));
+	--text-9xl--line-height:  calc(var(--type-leading) / pow(var(--type-scale-factor), 10 * var(--type-leading-falloff)));
+
 }
 
-blockquote {
-	font-family: var(--font-display);
-	font-style: italic;
-	@apply text-xl font-medium border-l-4 pl-4 italic text-neutral-700;
-}
+@layer utilities {
 
-code, pre {
-	font-family: var(--font-mono);
-	font-weight: 400;
-}
 
-code {
-	@apply text-sm px-1 py-0.5 rounded bg-neutral-100 text-neutral-800;
-}
+	/* SCALE TEXT SIZES smaller classes */
+	.smaller-text .text-base, .smaller-text.text-base { 
+		font-size: calc(var(--text-base) * var(--type-scale-smaller)); }
+	.smaller-text .text-xs, .smaller-text.text-xs  { 
+		font-size: calc(var(--text-xs) * var(--type-scale-smaller)); }
+	.smaller-text .text-sm, .smaller-text.text-sm  { 
+		font-size: calc(var(--text-sm) * var(--type-scale-smaller)); }
+	.smaller-text .text-lg, .smaller-text.text-lg  { 
+		font-size: calc(var(--text-lg) * var(--type-scale-smaller)); }
+	.smaller-text .text-xl, .smaller-text.text-xl  { 
+		font-size: calc(var(--text-xl) * var(--type-scale-smaller)); }
+	.smaller-text .text-2xl, .smaller-text.text-2xl { 
+		font-size: calc(var(--text-2xl) * var(--type-scale-smaller)); }
+	.smaller-text .text-3xl, .smaller-text.text-3xl { 
+		font-size: calc(var(--text-3xl) * var(--type-scale-smaller));	}
+	.smaller-text .text-4xl, .smaller-text.text-4xl { 
+		font-size: calc(var(--text-4xl) * var(--type-scale-smaller));	}
+	.smaller-text .text-5xl, .smaller-text.text-5xl { 
+		font-size: calc(var(--text-5xl) * var(--type-scale-smaller));	}
+	.smaller-text .text-6xl, .smaller-text.text-6xl { 
+		font-size: calc(var(--text-6xl) * var(--type-scale-smaller));	}
+	.smaller-text .text-7xl, .smaller-text.text-7xl { 
+		font-size: calc(var(--text-7xl) * var(--type-scale-smaller));	}
+	.smaller-text .text-8xl, .smaller-text.text-8xl { 
+		font-size: calc(var(--text-8xl) * var(--type-scale-smaller));	}
+	.smaller-text .text-9xl, .smaller-text.text-9xl { 
+		font-size: calc(var(--text-9xl) * var(--type-scale-smaller));	}
 
-pre {
-	@apply p-4 bg-neutral-100 rounded overflow-x-auto text-sm leading-relaxed;
-}
 
-a {
-	font-family: var(--font-base);
-	@apply text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors;
-}
+	/* SCALE TEXT SIZES larger classes */
+	.larger-text .text-base, .larger-text.text-base { 
+		font-size: calc(var(--text-base) * var(--type-scale-larger));	}
+	.larger-text .text-xs, .larger-text.text-xs { 
+		font-size: calc(var(--text-xs) * var(--type-scale-larger)); }
+	.larger-text .text-sm, .larger-text.text-sm { 
+		font-size: calc(var(--text-sm) * var(--type-scale-larger)); }
+	.larger-text .text-lg, .larger-text.text-lg { 
+		font-size: calc(var(--text-lg) * var(--type-scale-larger)); }
+	.larger-text .text-xl, .larger-text.text-xl { 
+		font-size: calc(var(--text-xl) * var(--type-scale-larger)); }
+	.larger-text .text-2xl, .larger-text.text-2xl { 
+		font-size: calc(var(--text-2xl) * var(--type-scale-larger)); }
+	.larger-text .text-3xl, .larger-text.text-3xl { 
+		font-size: calc(var(--text-3xl) * var(--type-scale-larger)); }
+	.larger-text .text-4xl, .larger-text.text-4xl { 
+		font-size: calc(var(--text-4xl) * var(--type-scale-larger)); }
+	.larger-text .text-5xl, .larger-text.text-5xl { 
+		font-size: calc(var(--text-5xl) * var(--type-scale-larger)); }
+	.larger-text .text-6xl, .larger-text.text-6xl { 
+		font-size: calc(var(--text-6xl) * var(--type-scale-larger)); }
+	.larger-text .text-7xl, .larger-text.text-7xl { 
+		font-size: calc(var(--text-7xl) * var(--type-scale-larger)); }
+	.larger-text .text-8xl, .larger-text.text-8xl { 
+		font-size: calc(var(--text-8xl) * var(--type-scale-larger)); }
+	.larger-text .text-9xl, .larger-text.text-9xl { 
+		font-size: calc(var(--text-9xl) * var(--type-scale-larger)); }
 
-strong {
-	font-weight: var(--weight-bold);
-}
 
-em {
-	font-style: italic;
-}
+	/* SCALE TEXT SIZES smaller tags */
+	.smaller-text small, small.smaller-text	{ 
+		font-size: calc(var(--text-sm) * var(--type-scale-smaller)); }
+	.smaller-text p, p.smaller-text { 
+		font-size: calc(var(--text-base) * var(--type-scale-smaller)); }
+	.smaller-text h6, h6.smaller-text { 
+		font-size: calc(var(--text-lg) * var(--type-scale-smaller)); }
+	.smaller-text h5, h5.smaller-text { 
+		font-size: calc(var(--text-xl) * var(--type-scale-smaller)); }
+	.smaller-text h4, h4.smaller-text { 
+		font-size: calc(var(--text-2xl) * var(--type-scale-smaller)); }
+	.smaller-text h3, h3.smaller-text { 
+		font-size: calc(var(--text-3xl) * var(--type-scale-smaller)); }
+	.smaller-text h2, h2.smaller-text { 
+		font-size: calc(var(--text-4xl) * var(--type-scale-smaller)); }
+	.smaller-text h1, h1.smaller-text { 
+		font-size: calc(var(--text-5xl) * var(--type-scale-smaller)); }
 
-small {
-	@apply text-sm;
-}
 
-sub, sup {
-	@apply text-xs align-baseline;
+	/* SCALE TEXT SIZES larger tags */
+	.larger-text small, small.larger-text { 
+		font-size: calc(var(--text-sm) * var(--type-scale-larger)); }
+	.larger-text p, p.larger-text { 
+		font-size: calc(var(--text-base) * var(--type-scale-larger)); }
+	.larger-text h6, h6.larger-text { 
+		font-size: calc(var(--text-lg) * var(--type-scale-larger)); }
+	.larger-text h5, h5.larger-text { 
+		font-size: calc(var(--text-xl) * var(--type-scale-larger)); }
+	.larger-text h4, h4.larger-text { 
+		font-size: calc(var(--text-2xl) * var(--type-scale-larger)); }
+	.larger-text h3, h3.larger-text { 
+		font-size: calc(var(--text-3xl) * var(--type-scale-larger)); }
+	.larger-text h2, h2.larger-text { 
+		font-size: calc(var(--text-4xl) * var(--type-scale-larger)); }
+	.larger-text h1, h1.larger-text  { 
+		font-size: calc(var(--text-5xl) * var(--type-scale-larger)); }
+
+
 }
-	*/

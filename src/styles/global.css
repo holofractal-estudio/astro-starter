@@ -9,26 +9,34 @@
 }
 
 
-/* PERSONALIZACION */
+
 :root {
 
-    /* TAMAÑO DE TEXTO */
+    /* GENERAL TEXT SIZE PARAMS */
     --type-scale-base: 1rem;
-    --type-scale-factor: 1.2;
-    --type-leading-max: 1.5;
+    --type-scale-factor: 1.1;
+    --type-scale-smaller: 0.8;
+    --type-scale-larger: 1.2;
+
+    /* GENERAL TEXT LINE HEIGHTS PARAMS */
     --type-leading-falloff: 0.24;
+    --type-leading: 1.4;
+    --type-ending: 1.4rem; /* type tags default margin-bottom */
+
+    /* DEFAULT WEIGHTS */
+    --tag-weight-body: 400;
+    --tag-weight-h1: 550;
+    --tag-weight-h2: 550;
+    --tag-weight-h3: 550;
+    --tag-weight-h4: 550;
+    --tag-weight-h5: 550;
+    --tag-weight-h6: 550;
+    --tag-weight-strong: 550;
 
 }
-
 
 @import "./basic/tipografia.css";
 
-
-@layer utilities {
-    .smaller {
-        --type-scale-base: 0.1rem
-    }
-}
 
 
 

@@ -1,0 +1,53 @@
+
+
+@layer base {
+
+	/* FONT */
+	body { @apply font-body antialiased; }
+	h1, h2, h3, h4, h5, h6 { @apply font-head; }
+	em, i { font-style: oblique 10deg; }
+
+	/* SIZES */
+	small { @apply text-sm; }
+	body { @apply text-base; }
+	h1 	{ @apply text-5xl; }
+	h2 	{ @apply text-4xl; }
+	h3 	{ @apply text-3xl; }
+	h4 	{ @apply text-2xl; }
+	h5 	{ @apply text-xl; }
+	h6 	{ @apply text-lg; }
+
+}
+
+
+@theme {
+
+	--text-xs:  calc(var(--type-scale-base) / pow(var(--type-scale-factor), 2));
+	--text-sm:  calc(var(--type-scale-base) / pow(var(--type-scale-factor), 1));
+	--text-base: var(--type-scale-base);
+	--text-lg:  calc(var(--type-scale-base) * pow(var(--type-scale-factor), 1));
+	--text-xl:  calc(var(--type-scale-base) * pow(var(--type-scale-factor), 2));
+	--text-2xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 3));
+	--text-3xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 4));
+	--text-4xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 5));
+	--text-5xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 6));
+	--text-6xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 7));
+	--text-7xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 8));
+	--text-8xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 9));
+	--text-9xl: calc(var(--type-scale-base) * pow(var(--type-scale-factor), 10));
+
+	--text-xs--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -2 * var(--type-leading-falloff)));
+	--text-sm--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), -1 * var(--type-leading-falloff)));
+	--text-base--line-height: var(--type-leading-max);
+	--text-lg--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 1 * var(--type-leading-falloff)));
+	--text-xl--line-height:   calc(var(--type-leading-max) / pow(var(--type-scale-factor), 2 * var(--type-leading-falloff)));
+	--text-2xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 3 * var(--type-leading-falloff)));
+	--text-3xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 4 * var(--type-leading-falloff)));
+	--text-4xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 5 * var(--type-leading-falloff)));
+	--text-5xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 6 * var(--type-leading-falloff)));
+	--text-6xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 7 * var(--type-leading-falloff)));
+	--text-7xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 8 * var(--type-leading-falloff)));
+	--text-8xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 9 * var(--type-leading-falloff)));
+	--text-9xl--line-height:  calc(var(--type-leading-max) / pow(var(--type-scale-factor), 10 * var(--type-leading-falloff)));
+
+}
