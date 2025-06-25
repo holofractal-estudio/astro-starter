@@ -3,15 +3,24 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "npm run indexer && astro dev",
+    "build": "npm run indexer && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fonts": "node src/scripts/fonts.js"
+
+    "indexer": "node src/scripts/indexer.mjs",
+    
+    "i-data": "node src/scripts/indexer.mjs data",
+    "w-data": "chokidar \"src/config/components/**/*.mjs\" \"src/components/data/**/*.mjs\" -c \"npm run i-data\"",
+
+    "i-astro": "node src/scripts/indexer.mjs astro",
+    "w-astro": "chokidar \"src/components/astro/**/*.astro\" -c \"npm run i-astro\""
+
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/sitemap": "^3.4.1",
+    "@fontsource-variable/inter": "^5.2.6",
     "@fontsource-variable/roboto": "^5.2.6",
     "@fontsource-variable/roboto-flex": "^5.2.6",
     "@iconify-json/lucide": "^1.2.48",
@@ -26,6 +35,10 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16"
+    "@tailwindcss/typography": "^0.5.16",
+    "chokidar": "^4.0.3",
+    "chokidar-cli": "^3.0.0",
+    "glob": "^11.0.3",
+    "yargs": "^18.0.0"
   }
 }

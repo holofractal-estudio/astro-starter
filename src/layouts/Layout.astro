@@ -1,14 +1,15 @@
 ---
-import "../styles/global.css";
-import { SITE } from '../config/site.js';
+import "@styles/global.css";
+import { SITE } from '@config/global/site.mjs';
 
 // SEO
 import { SEO } from 'astro-seo';
-import { getSeoData } from '../utils/seo.js'
+import { getSeoData } from '@utilities/seo.mjs'
 const { seo = {} } = Astro.props.frontmatter || Astro.props;
 const seoData = getSeoData(seo);
 
 ---
+<!DOCTYPE html>
 <html lang={ SITE.lang }>
   <head>
     <SEO { ...seoData } />

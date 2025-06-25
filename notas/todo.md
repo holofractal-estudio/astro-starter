@@ -1,3 +1,21 @@
+
+
+- usar chokidar cli para hacer watch en folder components/data y ejecutar el script gencompdata
+- agregar npm run gencompdata && npm run dev y build
+
+
+
+Sistema de componentes
+
+- componentes 'typography' personalizables para sustituir a los default (p, h1, small, etc)
+	- principal objetivo, usar variants como media queries, states, etc.
+- JS para customizar componentes a nivel proyecto con abstracción
+- JS para definir diccionario de estilos tipograficos con utilities
+	- puede estar directo en el .astro si no se va a modificar
+
+
+
+
 Tailwind
 
 - Curso completo de Tailwind -- https://www.youtube.com/watch?v=6biMWgD6_JY&ab_channel=JavaScriptMastery

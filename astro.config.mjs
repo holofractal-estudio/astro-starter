@@ -3,8 +3,8 @@
 import { defineConfig } from 'astro/config';
 
 // Configuración del sitio
-import { SITE } from './src/config/site.js';
-import ICONIFY from './src/config/iconify.js';
+import { SITE } from './src/config/global/site.mjs';
+import ICONIFY from './src/config/global/iconify.mjs';
 
 // Integraciones
 import tailwindcss from '@tailwindcss/vite';

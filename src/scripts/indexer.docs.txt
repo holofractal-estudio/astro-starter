@@ -1,0 +1,61 @@
+
+Universal Indexer Script for Astro
+==================================
+
+Este script genera archivos `.mjs` que agrupan automáticamente recursos desde carpetas (componentes o datos)
+en un único archivo indexado. Útil para importar en componentes Astro con una sola línea y mantener el código limpio.
+
+Formato del archivo de configuración (config.js):
+--------------------------------------------------
+El archivo debe exportar un objeto cuyas claves son los nombres de tarea.
+
+Ejemplo:
+
+export default {
+    astro: {
+        type: 'comp',
+        src: 'src/components/astro/**/*.astro',
+        out: 'src/components/CompIndex.mjs'
+    },
+    data: {
+        type: 'obj',
+        src: 'src/data/**/*.mjs',
+        out: 'src/data/IndexData.mjs'
+    }
+};
+
+Tipos soportados:
+------------------
+- type: "comp"
+    Agrupa archivos que exportan default (como componentes `.astro`, imágenes, íconos SVG, etc.).
+    Genera:
+        export { default as Nombre } from './path/Nomre.astro';
+
+- type: "obj"
+    Importa `default` desde archivos `.mjs` y lo imprime como objeto explícito.
+    Genera:
+        export const archivo = { ...contenido... };
+    Esto permite que Tailwind detecte las clases declaradas en los valores del objeto.
+
+Modos de uso desde CLI:
+------------------------
+
+1. Ejecutar todas las tareas definidas en el config:
+	node scripts/indexer.mjs --config indexer.config.js		
+
+2. Ejecutar tareas específicas (por nombre):
+	node scripts/indexer.mjs --config indexer.config.js astro
+	node scripts/indexer.mjs --config indexer.config.js astro data
+
+Notas:
+------
+- El nombre de cada tarea debe ser único dentro del archivo config.
+- Si no se pasan nombres, se ejecutan todas las tareas.
+- El archivo generado tendrá un comentario al inicio indicando que fue autogenerado y el nombre de la tarea.
+
+Recomendación:
+--------------
+Puedes tener múltiples archivos de configuración según el contexto o entorno:
+	- indexer.assets.config.js
+	- indexer.tailwind.config.js
+	- indexer.dev.config.js

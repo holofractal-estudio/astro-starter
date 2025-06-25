@@ -1,6 +1,7 @@
 
-import { SITE } from './site.js';
+import { SITE } from '@config/global/site.mjs';
 
+// Config object docs: https://github.com/jonasmerlin/astro-seo
 export const SEO_DEFAULTS = {
   title: SITE.name,
   titleTemplate: '%s | ' + SITE.name,

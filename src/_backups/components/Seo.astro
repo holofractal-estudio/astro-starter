@@ -1,6 +1,6 @@
 ---
 import { SEO } from 'astro-seo';
-import { getSeoData } from '../utils/seo.js'
+import { getSeoData } from '@utilities/seo.mjs'
 const seo = getSeoData(Astro.props.seo);
 ---
 <SEO {...seo} />

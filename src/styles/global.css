@@ -1,44 +1,13 @@
 @import "tailwindcss";
-@import "./basic/preline.css";
 
-/* FONTS */
-@import "./fonts/roboto-flex-standard.css";
-@theme {
-    --font-body: 'Roboto Flex Variable', sans-serif;
-    --font-head: 'Roboto Flex Variable', sans-serif;
-}
+@import "./base/preline.css";
+@import "./base/text-sizes.css";
+
+@import "./customize/typography.css";
 
 
-
-:root {
-
-    /* GENERAL TEXT SIZE PARAMS */
-    --type-scale-base: 1rem;
-    --type-scale-factor: 1.1;
-    --type-scale-smaller: 0.8;
-    --type-scale-larger: 1.2;
-
-    /* GENERAL TEXT LINE HEIGHTS PARAMS */
-    --type-leading-falloff: 0.24;
-    --type-leading: 1.4;
-    --type-ending: 1.4rem; /* type tags default margin-bottom */
-
-    /* DEFAULT WEIGHTS */
-    --tag-weight-body: 400;
-    --tag-weight-h1: 550;
-    --tag-weight-h2: 550;
-    --tag-weight-h3: 550;
-    --tag-weight-h4: 550;
-    --tag-weight-h5: 550;
-    --tag-weight-h6: 550;
-    --tag-weight-strong: 550;
-
-}
-
-@import "./basic/tipografia.css";
-
-
-
+/* Dark mode con clase */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* TESTING */
 body { 

@@ -14,8 +14,6 @@
 /* Preline suggestion: Defaults hover styles on all devices */
 @custom-variant hover (&:hover);
 
-/* Dark mode con clase */
-@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
 

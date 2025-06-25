@@ -1,40 +1,9 @@
 
-
 @layer base {
-
-	/* FONT */
-	body { @apply font-body antialiased; }
-	h1, h2, h3, h4, h5, h6 { @apply font-head }
-	em, i { font-style: oblique 10deg; }
-
-	/* SIZES */
-	small { @apply text-sm; }
-	body, p { @apply text-base; }
-	h1 	{ @apply text-5xl; }
-	h2 	{ @apply text-4xl; }
-	h3 	{ @apply text-3xl; }
-	h4 	{ @apply text-2xl; }
-	h5 	{ @apply text-xl; }
-	h6 	{ @apply text-lg; }
-
-	/* WEIGHTS */
-	body 	{ font-weight: var(--tag-weight-body); }
-	h1		{ font-weight: var(--tag-weight-h1); }
-	h2		{ font-weight: var(--tag-weight-h2); }
-	h3		{ font-weight: var(--tag-weight-h3); }
-	h4		{ font-weight: var(--tag-weight-h4); }
-	h5		{ font-weight: var(--tag-weight-h5); }
-	h6		{ font-weight: var(--tag-weight-h6); }
-	b, strong { font-weight: var(--tag-weight-strong); }
-
-	/* MARGINS */
-	h1, h2, h3, h4, h5, h6, p, small { margin-bottom: var(--type-ending); }
-	/* small {display: block; } */
-
-
-
+	/* add default text block ending margin for MDX */
+	h1, h2, h3, h4, h5, h6, p, small { 
+		margin-bottom: var(--type-ending); }
 }
-
 @theme {
 
 	--text-base: var(--type-scale-base);
@@ -71,7 +40,7 @@
 
 
 	/* SCALE TEXT SIZES smaller classes */
-	.smaller-text .text-base, .smaller-text.text-base { 
+	.smaller-text :where(.text-base), .smaller-text.text-base { 
 		font-size: calc(var(--text-base) * var(--type-scale-smaller)); }
 	.smaller-text .text-xs, .smaller-text.text-xs  { 
 		font-size: calc(var(--text-xs) * var(--type-scale-smaller)); }

@@ -1,5 +1,5 @@
-import { SITE } from '../config/site.js'
-import { SEO_DEFAULTS } from '../config/seo.js'
+import { SITE } from '@config/global/site.mjs'
+import { SEO_DEFAULTS } from '@config/global/seo.mjs'
 
 export function getSeoData (seoData) {
 	

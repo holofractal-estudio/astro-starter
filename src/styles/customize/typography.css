@@ -1,0 +1,61 @@
+
+@import "../fonts/roboto-flex-standard.css";
+
+@theme {
+    --font-main: 'Roboto Flex Variable', sans-serif;
+}
+@utility italic-var {
+    font-style: oblique 10deg;
+}
+:root {
+
+    /* TEXT SIZE PARAMS */
+    --type-scale-base: 1rem;
+    --type-scale-factor: 1.2;
+    --type-scale-smaller: 0.8;
+    --type-scale-larger: 1.2;
+    --type-leading-falloff: 0.24;
+    --type-leading: 1.5;
+    --type-ending: 1.5rem; /* default margin-bottom for text blocks */
+
+}
+
+@layer base {
+
+
+	body {
+		@apply font-main font-[400] antialiased text-base; }
+	h1 {
+		@apply font-[550] text-5xl;	}
+	h2 {
+		@apply font-[550] text-4xl;	}
+	h3 {
+		@apply font-[550] text-3xl;	}
+	h4 {
+		@apply font-[550] text-2xl;	}
+	h5 {
+		@apply font-[550] text-xl;	}
+	h6 {
+		@apply font-[550] text-lg;	}
+	p {
+		@apply text-base }
+	small {
+		@apply text-sm }
+
+
+	em, i { 
+		@apply italic-var }
+	strong, b {
+		@apply font-[550]; }
+
+
+	blockquote {
+		@apply border-l-2 px-(--blockquote-px) py-(--blockquote-py);
+		/* padding-left: var(--blockquote-pl); */
+		margin-bottom: var(--type-ending);
+	}
+	blockquote p {
+		@apply italic-var text-(size:--blockquote-size) m-0 font-(--tag-weight-blockquote);
+	}
+
+}
