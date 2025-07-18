@@ -1,0 +1,35 @@
+---
+import Base from '@layouts/Base.astro';
+
+// Importación de componentes
+import {
+	Ejemplo
+} from '@components/astro.mjs'
+
+// Importación de datos de config
+import {
+	ejemplo
+} from '@config/data/index.mjs';
+
+// Datos de SEO para la página
+const seo = {
+	title: "Ejemplo de componente",
+	description: "Ejemplo de configuración e importación de datos para pasar a componentes"
+};
+
+const data = { color: "red" }
+---
+<Base seo={seo}>
+
+	<Ejemplo>
+		Ejemplo con datos default importados en componente (definidos en config/comps o components/data) </Ejemplo>
+	<Ejemplo {...ejemplo} >
+		Ejemplo con datos asignados en página (importados de config/data) </Ejemplo>
+	<Ejemplo color="black" > 
+		Ejemplo con datos asignados como props </Ejemplo>
+	<Ejemplo {...data} > 
+		Ejemplo con datos asignados como const en props </Ejemplo>
+	<Ejemplo {...{ color: "blue" }} > 
+		Ejemplo con datos asignados como objeto declarado en props </Ejemplo>
+
+</Base>

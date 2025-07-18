@@ -8,8 +8,3 @@
 
 /* Dark mode con clase */
 @custom-variant dark (&:where(.dark, .dark *));
-
-/* TESTING */
-body { 
-    @apply p-10 bg-gray-900 text-gray-500; 
-}

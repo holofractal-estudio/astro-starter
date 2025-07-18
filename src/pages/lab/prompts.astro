@@ -1,0 +1,131 @@
+---
+import Layout from "@layouts/Layout.astro";
+const prompts = [
+
+	{
+		name: "Leslie",
+		description: "27 year old woman with brown eyes, wearing a chef coat and hat, with her arms crossed, representing the archetype of a The empress",
+	},
+	{
+		name: "Grace",
+		description: "42 year old woman with straight long hair, holding a paper clipboard with several papers in it, representing the archetype of The Queen of swords",
+	},
+	{
+		name: "Hector Lozano",
+		description: "17 year old mexican man with brown eyes, short black hair, holding a videogame controller, with lightnings coming out of his hands representing the archetype of the magician",
+	},
+	{
+		name: "Hector Nava",
+		description: "30 year old man holding a guitar, representing the archetype of king of cups",
+	},
+	{
+		name: "Liz",
+		description: "33 year old woman with black and blue hair holding a smartphone, representing the archetype of the queen of cups",
+	},
+	{
+		name: "Tish",
+		description: "33 year old woman with long black curly hair holding a glass of wine representing the archetype of a star",
+	},
+	{
+		name: "Ana Laura",
+		description: "30 year old woman with long brown curly hair holding a film reel, sitting on the chair of a movie director",
+	},
+	// ------------------------------------------
+	{
+		name: "Carlie",
+		description: "34 year old woman with medium long brown curly hair, wearing a tie dye hoodie, representing the archetype of the queen of wands",
+	},
+	{
+		name: "Sandy Escobar",
+		description: "35 year old woman with long copper hair, sorrounded by nail polish bottles, representing the archetype of the queen of pentacles",
+	},
+	{
+		name: "Mary",
+		description: "25 year old woman with long black curly hair, holding a book, representing the archetype of The fool",
+	},
+	{
+		name: "Leila",
+		description: "25 year old woman with black straight hair shoulder-long, holding an ipad, representing the archetype of the visionary",
+	},
+	{
+		name: "Ruth",
+		description: "35 year old woman with long blondish hair, holding a frappuccino, representing the archetype of the queen of swords",
+	},
+	{
+		name: "Mary (suegra)",
+		description: "50 year old woman with brown eyes, holding a purple dalia flower in a pot, representing the archetype of the queen of cups",
+	},
+	{
+		name: "Mitzy",
+		description: "35 year old woman with long brown hair holding a tarot deck, representing a cute version of a witch",
+	},
+	{
+		name: "Sandy",
+		description: "35 year old woman with long black hair holding a bottle of beer representing the archetype of the temperance",
+	},
+	{
+		name: "Graciela (abuela)",
+		description: "60 year old woman with short hair holding a bucket of casino coins representing the archetype of The fortune",
+	},
+	{
+		name: "Nallely",
+		description: "35 year old woman with long copper hair holding a cup of coffee, representing the archetype of the high priestess",
+	},
+	{
+		name: "Blanca",
+		description: "34 year old woman with brown eyes and long black hair, wearing a doctor coat holding a scale, representing the archetype of the strenght",
+	},
+	{
+		name: "Jhorman",
+		description: "34 year old man with medium long blue hair, wearing a mystic robe, holding an iPad, representing the archetype of the devil",
+	},
+	{
+		name: "Brandon",
+		description: "35 year old man with short hair, holding a Ferrari replica model, representing the archetype of the hermit",
+	},
+	{
+		name: "Carlos (suegro)",
+		description: "60 year old man with short gray hair, holding a big cup of coffeee, representing the archetype of the knight of cups",
+	},
+	{
+		name: "Saul",
+		description: "34 year old man with short hair and green eyes holding a laptop, representing the archetype of the king of wands",
+	},
+	{
+		name: "Pepe",
+		description: "36 year old man with short hair representing a dungeon master from Dungeons and dragons",
+	},
+	{
+		name: "Marcelo",
+		description: "33 year old man with short hair holding a law book representing the archetype of The Justice",
+	},
+	{
+		name: "Hector Gonzalez",
+		description: "50 year old man with short black hair holding a wrench tool, representing the archetype of the king of pentacles",
+	},
+	{
+		name: "Ramón (abuelo)",
+		description: "70 year old man with short gray hair holding a bucket of casino coins representing the archetype of the fool",
+	},
+
+];
+---
+<Layout seo={{title:"Prompts"}}>
+	<div class="flex justify-center">
+		<div class="max-w-xl">
+			<h1>Prompts</h1>
+			<div class="space-y-8">
+			{prompts.map(p => (
+				<div class="bg-gray-800 p-4 rounded-lg shadow">
+				<h2>{p.name}</h2>
+				<p class="m-0">
+					
+A textured, highly detailed watercolor modern esoteric tarot style bust artistic abstract portrait facing forward illustration of a handsome, short neck, <mark>{p.description}</mark>. The art piece is painted with purple tones, white and gold ink, and the background blends textured watercolor layered gradients and subtle splashes of color, suggesting cosmic scenery and esoteric symbols.
+
+				</p>
+				</div>
+			))}
+			</div>
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,19 @@
+---
+import { 
+	ejemplo, colors
+	// } from '@components/data.mjs'; // si son objetos procesados por indexer
+	} from '@config/comps/ejemplo.mjs'; // si son objetos sin procesar
+
+const props = set_props({
+	color: ejemplo.color,
+	...Astro.props
+	});
+
+function set_props (input) {
+	return {
+		divclass: ["p-8 text-xl font-semibold", colors[input.color]].join(" ")
+	}
+};
+
+---
+<div class={ props.divclass }><slot/></div>

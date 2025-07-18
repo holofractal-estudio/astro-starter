@@ -4,7 +4,7 @@ import { SITE } from '@config/global/site.mjs';
 // Config object docs: https://github.com/jonasmerlin/astro-seo
 export const SEO_DEFAULTS = {
   title: SITE.name,
-  titleTemplate: '%s | ' + SITE.name,
+  // titleTemplate: '%s | ' + SITE.name,
   charset: 'UTF-8',
   description: SITE.description,
   openGraph: {
