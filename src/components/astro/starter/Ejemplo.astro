@@ -10,8 +10,10 @@ const props = set_props({
 	});
 
 function set_props (input) {
+	console.log(input)
+	let color = 'green' in input ? 'bg-green-800 text-green-100' : colors[input.color]
 	return {
-		divclass: ["p-8 text-xl font-semibold", colors[input.color]].join(" ")
+		divclass: ["p-8 text-xl font-semibold", color].join(" ")
 	}
 };
 

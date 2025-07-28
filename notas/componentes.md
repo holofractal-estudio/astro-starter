@@ -66,3 +66,22 @@ function set_props (input) {
 	}
 ---
 <div {...props}>{ props.content }</div>
+
+
+## Ideas para personalizar componentes con colores
+
+
+### Escribir clases para usos específicos en global.css, por ejemplo:
+.input {
+	@apply [clases que aplican a todos los inputs]
+	@apply [colores en diferentes estados]
+}
+- mas cercano al enfoque css normal pero aprovechando clases utilitarias
+- estilos de elementos globales
+- estilos default por componente para cada elemento
+- usar nombres descriptivos y especificos para elementos de componente
+
+### Agregar clases usando [tailwind-merge] para que se ordenen y sustituyan correctamente para overrides de defaults
+Utilidad para concatenar strings de clases resolviendo conflictos, para componentes donde las clases se asignan dinamicamente con props
+
+https://github.com/dcastil/tailwind-merge

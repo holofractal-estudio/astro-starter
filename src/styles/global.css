@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-@import "./base/preline.css";
-@import "./base/text-sizes.css";
+/* @import "./base/preline.css"; */
+/* @import "./base/text-sizes.css"; */
 
-@import "./customize/typography.css";
+/* @import "./customize/typography.css"; */
 
 
 /* Dark mode con clase */
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */

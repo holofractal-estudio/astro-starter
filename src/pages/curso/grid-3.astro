@@ -1,0 +1,61 @@
+---
+import Base from '@layouts/Base.astro';
+---
+<Base 
+	seo={{title:'SANDBOX'}} 
+	body="bg-gray-800 text-white h-screen">
+{/*****************************************/}
+
+
+
+<section class="flex flex-col justify-stretch p-10 min-h-full">
+	<h1 class="bg-gray-700 text-xl font-semibold p-4 mb-4 rounded">
+		Fun Facts About Animals That Will Blow Your Mind
+	</h1>
+	<div class="bg-gray-900 border-2 border-gray-700 rounded-md
+		*:p-4 *:rounded *:bg-emerald-900 *:text-3xl
+		flex-auto
+		grid gap-4
+		grid-cols-[repeat(3,200px)] 
+		grid-rows-[repeat(3,200px)] 
+		(cell alignment cuando elemento no abarque toda la celda)
+		justify-items-center (horizontal cell) 
+		items-center (vertical cell)
+		justify-between (horizontal container) 
+		content-evenly (vertical container)
+		">
+		{/* justify-self (horizontal cell) self (vertical cell)*/}
+		<p class="justify-self-start self-start">1</p>
+		<p class="justify-self-center self-start">2</p>
+		<p class="justify-self-end self-start">3</p>
+		<p class="justify-self-start">4</p>
+		<p class="place-self-center (horz y vert)">5</p>
+		<p class="justify-self-end">6</p>
+		<p class="justify-self-start self-end">7</p>
+		<p class="justify-self-center self-end">8</p>
+		<p class="justify-self-end self-end">9</p>
+	</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/*****************************************/}
+</Base>

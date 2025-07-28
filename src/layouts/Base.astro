@@ -7,7 +7,7 @@ import { SEO } from 'astro-seo';
 import { getSeoData } from '@utilities/seo.mjs'
 const props = Astro.props.frontmatter || Astro.props;
 const seo = getSeoData(props.seo || {});
-
+const body = Astro.props.body || ""
 ---
 <!DOCTYPE html>
 <html lang={ SITE.lang }>
@@ -16,5 +16,5 @@ const seo = getSeoData(props.seo || {});
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
-  <slot />
+  <body class={body}><slot /></body>
 </html>
